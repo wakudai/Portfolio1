@@ -1,0 +1,233 @@
+@media only screen and (max-width: 767px){
+ /* header */
+ .l-header__list {
+  display: none;
+ }
+.l-header {
+  position: relative;
+  height: 60px;
+  padding: 20px;
+}
+.l-header__logo {
+  width: 107px;
+}
+
+/* ハンバーガーメニュー */
+.p-gnav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 180px;
+  height: 100%;
+  background-color: #dd1b57;
+  box-shadow: -10px 0 35px -20px rgb(0 0 0 / 25%);
+}
+.p-gnav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 180px;
+  padding: 90px 20px 20px 50px;
+  row-gap: 25px;
+}
+.p-gnav__link {
+  color: #fff;
+}
+.p-gnav__linkActive {
+  opacity: 0.6;
+}
+.p-btn__menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 2px 16px;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #dd1b57;
+  cursor: pointer;
+  appearance: none;
+}
+.p-btn__menuLine {
+  display: block;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: all 0.4s;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.p-btn__menuLine::before,
+.p-btn__menuLine::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: inherit;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.p-btn__menuLine::before {
+  top:-8px
+}
+.p-btn__menuLine::after {
+  top: 8px;
+}
+.p-btn__menu.active .p-btn__menuLine {
+  background-color: transparent;
+}
+.p-btn__menu.active .p-btn__menuLine::before,
+.p-btn__menu.active .p-btn__menuLine::after {
+  top: 0;
+  background-color: #fff;
+}
+.p-btn__menu.active .p-btn__menuLine::before {
+  transform: rotate(45deg);
+}
+.p-btn__menu.active .p-btn__menuLine::after {
+  transform: rotate(-45deg);
+}
+
+ /* メインビジュアル */
+ .l-mv {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 70vh;
+   text-align: center;
+   background-image: url(../../../images/sp_mv.jpeg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+ }
+ .l-mv__titleArea {
+   text-align: center;
+   color: #fff;
+ }
+ .l-mv__title {
+  font-size: 21.5vw;
+  line-height: 1;
+  text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+  margin-bottom: 2%;
+ }
+.l-mv__subtitle {
+  font-size: 5.5vw;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+/* main */
+.l-main {
+  padding: 15% 0;
+}
+
+/* news */
+.p-news {
+  margin: 0 5%;
+}
+.p-news__titleArea {
+  margin-bottom: 5%;
+}
+.p-news__title {
+  font-size: 8.5vw;
+  font-weight: bold;
+  color: #dd1b57;
+}
+.p-news__box {
+  width: auto;
+}
+.p-news__list {
+  border-bottom: #333 solid 1px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  gap: 3%;
+  font-size: 4vw;
+}
+.p-news__list:hover {
+  color: #dd1b57;
+}
+.p-news__event {
+  line-height: 2;
+}
+
+/* service */
+.p-service {
+  margin: 10% 3% 0 3%;
+  padding: 0 2%;
+}
+.p-service__titleArea {
+  position: relative;
+}
+.p-service__titleArea::before {
+  display: block;
+  position: absolute;
+  content: "SERVICE";
+  font-size: 70px;
+  font-weight: bold;
+  color: #f2f2f2;
+  top: -3px;
+  right: -30px;
+  z-index: -1;
+}
+.p-service__title {
+  font-size: 8.5vw;
+  font-weight: bold;
+  color: #dd1b57;
+}
+.p-service__content {
+  margin-top: 5%;
+}
+.p-service__box {
+  background-color: #fff;
+  box-shadow: 0 3px 21px rgb(0 0 0 / 16%);
+  padding: 10% 8%;
+  margin: 10% 0;
+}
+.p-service__icon {
+  margin-bottom: 5%;
+  text-align: center;
+}
+.p-service__icon span{
+  font-size: 20vw;
+  color: #dd1b57;
+}
+.p-service__feature {
+  font-size: 4.5vw;
+  font-weight: bold;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.p-service__detail {
+  font-size: 4vw;
+}
+
+ /* footer */
+ .l-footer {
+   color: #fff;
+   padding: 5% 3%;
+   background-color: #dd1b57;
+ }
+ .l-footer__navList {
+   display: flex;
+   gap: 5%;
+   line-height: 2;
+ }
+ .l-footer__navItem a {
+   font-size: 1.2vw;
+   font-weight: 700;
+ }
+ .l-footer__copyright {
+   font-size: 0.1vw;
+  }
+}

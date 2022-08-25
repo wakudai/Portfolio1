@@ -1,0 +1,132 @@
+@media only screen and (min-width: 768px){
+/* header */
+ .l-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 70px;
+   background-color: #fff;
+ }
+
+ /* メニューバー */
+ .p-gnav__list {
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+ }
+ .p-gnav__listItem {
+   font-size: 1.3vw;
+   font-weight: bold;
+ }
+ .p-gnav__link {
+   color: #333;
+ }
+ .p-gnav__linkActive {
+  color: #dd1b57;
+}
+ .p-gnav__link:hover {
+   color: #dd1b57;
+ }
+.p-btn__menu {
+  display: none;
+}
+
+ /* メインビジュアル */
+ .l-mv {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 190px;
+   text-align: center;
+   background-image: url(../../../images/pc_header.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+ }
+ .l-mv__titleArea {
+   text-align: center;
+   color: #fff;
+ }
+ .l-mv__title {
+  font-size: 3.5vw;
+  line-height: 1;
+  text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+  margin-bottom: 2%;
+ }
+
+/* main */
+.l-main {
+  padding: 5% 0;
+}
+
+/* message */
+.p-message {
+  width: 90%;
+  margin: 0 auto;
+}
+.p-message__titleArea {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
+.p-message__title {
+  font-size: 2.8vw;
+  color: #dd1b57;
+  margin-bottom: 4.5%;
+}
+.p-message__subTitle {
+  font-size: 1.3vw;
+  margin-bottom: 8%;
+}
+.p-message__content {
+  width: 62%;
+  margin: 0 auto;
+}
+.p-message__avatar {
+  width: 100px;
+  margin: 0 25px 15px 0;
+  float: left;
+}
+.p-massage__avaterImg {
+  border-radius: 50%;
+}
+.p-message__textBox {
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+.p-message__text a {
+  text-decoration: underline;
+  color: #349bf4;
+}
+
+/* office */
+.p-office {
+  width: 90%;
+  margin: 5% auto 0 auto;
+}
+.p-office__img {
+  width: 100%;
+}
+
+ /* footer */
+ .l-footer {
+   color: #fff;
+   padding: 3% 5%;
+   background-color: #dd1b57;
+ }
+ .l-footer__navList {
+   display: flex;
+   gap: 5%;
+   line-height: 4;
+ }
+ .l-footer__navItem a {
+   font-size: 1.2vw;
+   font-weight: 700;
+ }
+.l-footer__copyright {
+  font-size: 0.1vw;
+}
+
+}

@@ -1,0 +1,135 @@
+@media only screen and (min-width: 768px){
+/* header */
+ .l-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 70px;
+   background-color: #fff;
+ }
+
+ /* メニューバー */
+ .p-gnav__list {
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+ }
+ .p-gnav__listItem {
+   font-size: 1.3vw;
+   font-weight: bold;
+ }
+ .p-gnav__link {
+   color: #333;
+ }
+ .p-gnav__linkActive {
+  color: #dd1b57;
+}
+ .p-gnav__link:hover {
+   color: #dd1b57;
+ }
+.p-btn__menu {
+  display: none;
+}
+
+ /* メインビジュアル */
+ .l-mv {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 190px;
+   text-align: center;
+   background-image: url(../../../images/pc_header.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+ }
+ .l-mv__titleArea {
+   text-align: center;
+   color: #fff;
+ }
+ .l-mv__title {
+  font-size: 3.5vw;
+  line-height: 1;
+  text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+  margin-bottom: 2%;
+ }
+
+/* main */
+.l-main {
+  padding: 5% 0;
+}
+
+/* conpany */
+.p-company {
+  width: 90%;
+  margin: 0 auto;
+}
+.p-company__list {
+  display: flex;
+  border-bottom: #b4b4b4 solid 1px;
+  font-size: 15px;
+}
+.p-company__summary {
+  width: 20%;
+  padding: 30px;
+}
+.p-company__detail {
+  padding: 30px;
+}
+
+/* map */
+.p-map {
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+.p-map__img {
+  width: 100%;
+}
+
+/* news */
+.p-news__box {
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+.p-news__list {
+  display: flex;
+  border-bottom: #b4b4b4 solid 1px;
+  margin-bottom: 15px;
+  padding: 15px 0;
+  gap: 3%;
+  font-size: 15px;
+}
+.p-news__list:hover {
+  color: #dd1b57;
+}
+.p-news__date {
+  padding: 15px 0 15px 30px;
+}
+.p-news__event {
+  padding: 15px 0;
+}
+
+ /* footer */
+ .l-footer {
+   color: #fff;
+   padding: 3% 5%;
+   background-color: #dd1b57;
+ }
+ .l-footer__navList {
+   display: flex;
+   gap: 5%;
+   line-height: 4;
+ }
+ .l-footer__navItem a {
+   font-size: 1.2vw;
+   font-weight: 700;
+ }
+.l-footer__copyright {
+  font-size: 0.1vw;
+}
+
+}

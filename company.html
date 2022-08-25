@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="expires" content="604800">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <title>会社概要-START</title>
+  <meta name="description" content="会社概要-START">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="icon-192x192.png">
+  <link rel="stylesheet" href="css/company/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" defer></script>
+</head>
+<body>
+  <div class="l-wapper">
+    <header class="l-header">
+      <div class="l-header__logo">
+        <a href="."><img src="./images/logo.svg" alt="STRAT"></a>
+      </div>
+      <div class="l-header__nav">
+        <nav class="p-gnav">
+          <ul class="p-gnav__list">
+            <li class="p-gnav__listItem"><a href="index.html" class="p-gnav__link">ホーム</a></li>
+            <li class="p-gnav__listItem"><a href="message.html" class="p-gnav__link">メッセージ</a></li>
+            <li class="p-gnav__listItem"><a href="company.html" class="p-gnav__link p-gnav__linkActive">会社概要</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="p-btn__menu" id="js-btn__menu">
+          <span class="p-btn__menuLine"></span>
+        </button>
+      </div>
+    </header>
+    <div class="l-mv">
+      <div class="l-mv__titleArea">
+        <h1 class="l-mv__title">会社概要</h1>
+      </div>
+    </div>
+  </div>
+  <main class="l-main">
+    <div class="p-company">
+      <div class="p-company__group">
+        <dl class="p-company__list">
+          <dt class="p-company__summary">社名</dt>
+          <dd class="p-company__detail">
+            <p class="p-company__text">株式会社START</p>
+          </dd>
+        </dl>
+        <dl class="p-company__list">
+          <dt class="p-company__summary">設立</dt>
+          <dd class="p-company__detail">
+            <p class="p-company__text">2025.02.10</p>
+          </dd>
+        </dl>
+        <dl class="p-company__list">
+          <dt class="p-company__summary">代表取締役</dt>
+          <dd class="p-company__detail">
+            <p class="p-company__text">ショーン・デイビット・ジュニア</p>
+          </dd>
+        </dl>
+        <dl class="p-company__list">
+          <dt class="p-company__summary">資本金</dt>
+          <dd class="p-company__detail">
+            <p class="p-company__text">10,000,000円</p>
+          </dd>
+        </dl>
+        <dl class="p-company__list">
+          <dt class="p-company__summary">所在地</dt>
+          <dd class="p-company__detail">
+            <p class="p-company__text">〒555-5555 東京都千代田区 スタートビルディング 606</p>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="p-map">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1gaQSzilmEXF7ALoUH7VAifYe9fg&ehbc=2E312F" width="640" height="480" class="p-map__img"></iframe>
+    </div>
+    <div class="p-news">
+      <div class="p-news__box">
+        <dl class="p-news__list">
+          <dt class="p-news__date">2030.02.08</dt>
+          <dd class="p-news__event">コーポレートサイトをリニューアルしました。</dd>
+        </dl>
+        <dl class="p-news__list">
+          <dt class="p-news__date">2030.02.10</dt>
+          <dd class="p-news__event">採用を強化中です！一緒に働きませんか？</dd>
+        </dl>
+                <dl class="p-news__list">
+          <dt class="p-news__date">2030.02.02</dt>
+          <dd class="p-news__event">人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！</dd>
+        </dl>
+      </div>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <nav class="l-footer__nav">
+      <ul class="l-footer__navList">
+        <li class="l-footer__navItem"><a href="index.html" class="l-footer__navLink">ホーム</a></li>
+        <li class="l-footer__navItem"><a href="message.html" class="l-footer__navLink">メッセージ</a></li>
+        <li class="l-footer__navItem"><a href="company.html" class="l-footer__navLink">会社概要</a></li>
+      </ul>
+    </nav>
+    <div class="l-footer__copyright">&copy;START</div>
+  </footer>
+
+  <script defer>
+    window.addEventListener("load" , function() {
+      $(document).on("click" , function() {
+        $("#js-btn__menu").toggleClass("active");
+        $(".p-gnav").addClass("show");
+        $(".p-gnav").animate({ width: "toggle" }, 200);
+      });
+
+      $(document).on("click" , function (e) {
+        if (!$(e.target).closest($(".p-gnav")).length && !$(e.target).closest($("#js-btn__menu")).length) {
+          if ($(".p-gnav").hasClass("show")) {
+            $(".p-gnav").removeClass("show")
+            $("#js-btn__menu").toggleClass("active");
+            $(".p-gnav").animate({ width: "toggle" }, 200);
+          }
+        }
+      });
+    },false);
+  </script>
+</body>

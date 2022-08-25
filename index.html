@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="expires" content="604800">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <title>START</title>
+  <meta name="description" content="START">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="icon-192x192.png">
+  <link rel="stylesheet" href="css/top/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" defer></script>
+</head>
+<body>
+  <div class="l-wapper">
+    <header class="l-header">
+      <div class="l-header__logo">
+        <a href="."><img src="./images/logo.svg" alt="STRAT"></a>
+      </div>
+      <div class="l-header__nav">
+        <nav class="p-gnav">
+          <ul class="p-gnav__list">
+            <li class="p-gnav__listItem"><a href="index.html" class="p-gnav__link p-gnav__linkActive">ホーム</a></li>
+            <li class="p-gnav__listItem"><a href="message.html" class="p-gnav__link">メッセージ</a></li>
+            <li class="p-gnav__listItem"><a href="company.html" class="p-gnav__link">会社概要</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="p-btn__menu" id="js-btn__menu">
+          <span class="p-btn__menuLine"></span>
+        </button>
+      </div>
+    </header>
+    <div class="l-mv">
+      <div class="l-mv__titleArea">
+        <h1 class="l-mv__title">START</h1>
+        <p class="l-mv__subtitle">仕事に最高のスタートを</p>
+      </div>
+    </div>
+  </div>
+  <main class="l-main">
+    <div class="p-news">
+      <div class="p-news__titleArea">
+        <p class="p-news__title">ニュース</p>
+      </div>
+      <div class="p-news__box">
+        <dl class="p-news__list">
+          <dt class="p-news__date">2030.02.08</dt>
+          <dd class="p-news__event">コーポレートサイトをリニューアルしました。</dd>
+        </dl>
+        <dl class="p-news__list">
+          <dt class="p-news__date">2030.02.10</dt>
+          <dd class="p-news__event">採用を強化中です！一緒に働きませんか？</dd>
+        </dl>
+                <dl class="p-news__list">
+          <dt class="p-news__date">2030.02.02</dt>
+          <dd class="p-news__event">人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="p-service">
+      <div class="p-service__titleArea">
+        <p class="p-service__title">サービス</p>
+      </div>
+      <div class="p-service__content">
+        <div class="p-service__box">
+          <div class="p-service__icon">
+            <span class="service-list__img material-icons-round">work</span>
+          </div>
+          <p class="p-service__feature">人材紹介業</p>
+          <p class="p-service__detail">新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。</p>
+        </div>
+        <div class="p-service__box">
+          <div class="p-service__icon">
+            <span class="service-list__img material-icons-round">location_city</span>
+          </div>
+          <p class="p-service__feature">スクール事業</p>
+          <p class="p-service__detail">オンラインでWeb制作を学べるスクールを運営しています。</p>
+        </div>
+        <div class="p-service__box">
+          <div class="p-service__icon">
+            <span class="service-list__img material-icons-round">desktop_windows</span>
+          </div>
+          <p class="p-service__feature">Webメディア運営</p>
+          <p class="p-service__detail">人事系メディアやWebデザイン関連のメディアなどを複数運営しています。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <nav class="l-footer__nav">
+      <ul class="l-footer__navList">
+        <li class="l-footer__navItem"><a href="index.html" class="l-footer__navLink">ホーム</a></li>
+        <li class="l-footer__navItem"><a href="message.html" class="l-footer__navLink">メッセージ</a></li>
+        <li class="l-footer__navItem"><a href="company.html" class="l-footer__navLink">会社概要</a></li>
+      </ul>
+    </nav>
+    <div class="l-footer__copyright">&copy;START</div>
+  </footer>
+
+  <script defer>
+    window.addEventListener("load" , function() {
+      $(document).on("click" , function() {
+        $("#js-btn__menu").toggleClass("active");
+        $(".p-gnav").addClass("show");
+        $(".p-gnav").animate({ width: "toggle" }, 200);
+      });
+
+      $(document).on("click" , function (e) {
+        if (!$(e.target).closest($(".p-gnav")).length && !$(e.target).closest($("#js-btn__menu")).length) {
+          if ($(".p-gnav").hasClass("show")) {
+            $(".p-gnav").removeClass("show")
+            $("#js-btn__menu").toggleClass("active");
+            $(".p-gnav").animate({ width: "toggle" }, 200);
+          }
+        }
+      });
+    },false);
+  </script>
+</body>
