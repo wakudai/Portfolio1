@@ -108,13 +108,13 @@
 
   <script defer>
     window.addEventListener("load" , function() {
-      $(document).on("click" , function() {
+      $("#js-btn__menu").on("click" , function() {
         $("#js-btn__menu").toggleClass("active");
         $(".p-gnav").addClass("show");
         $(".p-gnav").animate({ width: "toggle" }, 200);
       });
 
-      $(document).on("click" , function (e) {
+      $("#js-btn__menu").on("click" , function (e) {
         if (!$(e.target).closest($(".p-gnav")).length && !$(e.target).closest($("#js-btn__menu")).length) {
           if ($(".p-gnav").hasClass("show")) {
             $(".p-gnav").removeClass("show")
